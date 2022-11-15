@@ -29,7 +29,7 @@ function handleAdd(movieId) {
 searchBtn.addEventListener("click", handleSearch)
 
 function handleSearch() {
-    fetch(`http://www.omdbapi.com/?apikey=6f58387e&s=${searchInput.value}`)
+    fetch(`https://www.omdbapi.com/?apikey=6f58387e&s=${searchInput.value}`)
     .then(response => response.json())
     .then(data => {
         console.log(data)
@@ -51,7 +51,7 @@ function handleSearch() {
 function renderMovies() {
     let movieHtml = ""
     imdbID.forEach(function(id) {
-        fetch(`http://www.omdbapi.com/?apikey=6f58387e&i=${id}`)
+        fetch(`https://www.omdbapi.com/?apikey=6f58387e&i=${id}`)
         .then(response => response.json())
         .then(data => {
                 movieList.push(data)
