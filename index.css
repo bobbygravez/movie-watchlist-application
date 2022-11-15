@@ -1,0 +1,273 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Smythe', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+}
+
+.poster{
+    width: 100%;
+    height: 100%;
+}
+
+/* typography */
+
+.not-found{
+    position: absolute;
+    width: 321px;
+    height: 40px;
+    left: 115px;
+    top: 226px;
+    line-height: 20px;
+    color: #DFDDDD;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 43px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #DFDDDD;
+    width: 404px;
+    height: 29px;
+    position: absolute;
+    left: 73px;
+    top: 181px;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+
+h4{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #363636;
+}
+
+.movie-rating h4{
+    margin-bottom: 0;
+}
+
+p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #6B7280;
+}
+
+.banner a {
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.banner a:hover{
+    text-decoration: underline;
+}
+
+/* layout */
+
+.container{
+    width: 550px;
+    height: 779px;
+    background: #FFFFFF;
+    margin: 0 auto;
+    position: relative;
+}
+
+.banner{
+    width: 550px;
+    height: 208px;
+    background: #0E0E0E;
+    background-image: url(img/banner.png);
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 42px;
+    box-sizing: border-box;
+}
+
+.search-container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    position: absolute;
+    width: 462px;
+    height: 38px;
+    left: 44px;
+    top: 189px;
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+}
+
+input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 9px 13px;
+    gap: 8px;
+    width: 342px;
+    height: 38px;
+    border: 1px solid #D1D5DB;
+    border-left: none;
+}
+
+.search-btn{
+    display: block;
+    box-sizing: border-box;
+    padding: 9px 23px 9px 22px;
+    background: #F9FAFB;
+    border: 1px solid #D1D5DB;
+    border-radius: 0px 6px 6px 0px;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.search-btn:hover,
+.search-btn:focus{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.fa-magnifying-glass{
+   color:#D1D5DB ;
+}
+
+
+.movie-section,
+.watchlist-section{
+    position: relative;
+    width: 550px;
+    height: 571px;
+    display: flex;
+    flex-direction: column;
+    padding: 14px 0;
+}
+
+.movie-placeholder{
+    position: absolute;
+    width: 148px;
+    height: 90px;
+    left: 201px;
+    top: 212px;
+}
+
+.watchlist-placeholder{
+    display: flex;
+    width: 200px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    position: absolute;
+    left: 160px;
+    top: 225px;
+}
+
+.fa-circle-plus:hover,
+.fa-circle-minus:hover{
+    cursor: pointer;
+    color: #6B7280;
+}
+
+.watchlist-placeholder a{
+    color: #363636;
+}
+
+/* movies display */
+.movie-container{
+    width: 462px;
+    height: 147.41px;
+    display: flex;
+    margin: 21px 44px;
+}
+
+.poster-container{
+    width: 99px;
+    height: 100%;
+}
+
+.movie-details{
+    box-sizing: border-box;
+    width: 363;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 21px;
+    padding-top: 3px;
+}
+
+.movie-rating,
+.movie-specifications,
+.watchlist{
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie-rating{
+    width: fit-content;
+    align-items: center;
+    margin-top: 0;
+}
+
+.movie-specifications {
+    width: fit-content;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 3px;
+}
+
+.watchlist{
+    width: fit-content;
+}
+
+.watchlist .fa-circle-plus,
+.watchlist .fa-circle-minus{
+    padding-top: 20px;
+    margin: 0 2px;
+}
+
+.movie-plot{
+    width: 342px;
+    height: 60px;
+    text-transform: lowercase;
+    overflow: hidden;
+    margin-top: 7px;
+}
+
+hr{
+    border: 1.5px solid #E5E7EB;
+    width: 461px;
+    margin: 0 44px;
+}
+
+.star-icon{
+    padding-top: 17px;
+    margin: 0 4px 0 8px;
+}
